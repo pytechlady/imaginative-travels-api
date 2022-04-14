@@ -1,1 +1,1 @@
-web: gunicorn slitherstravels.wsgi
+web: gunicorn slitherstravels.wsgi --log-file -
