@@ -1,1 +1,1 @@
-web: gunicorn slitherstravels.wsgi --log-file -
+web: gunicorn --pythonpath slithers-travels slitherstravels.wsgi
