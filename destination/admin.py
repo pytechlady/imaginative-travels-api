@@ -6,7 +6,7 @@ from django.utils.html import format_html
 
 class DestinationAdmin(admin.ModelAdmin):
     def thumbnail(self, object):
-        return format_html('<img src="{0}" width="40" style="border-radius: 50%"/>'.format(object.destination_image.url))
+        return format_html('<img src="{0}" width="40" style="border-radius: 50%"/>'.format(object.destination_image))
     
     thumbnail.short_description = 'Photo'
     

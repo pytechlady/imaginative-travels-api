@@ -16,7 +16,7 @@ class Blog(models. Model):
     title = models.CharField(max_length=200)
     content = models.TextField()
     category = models.CharField(choices=category_choice, max_length=20)
-    travelphoto = models.ImageField(upload_to='photos/%Y/%m/%d')
+    travelphoto = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):

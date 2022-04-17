@@ -5,7 +5,7 @@ class Team(models.Model):
     first_name = models.CharField(max_length=20)
     last_name = models.CharField(max_length=20)
     title = models.CharField(max_length=30)
-    image = models.ImageField(upload_to='photos/%Y/%m/%d')
+    image = models.CharField(max_length=255)
     created_at = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
