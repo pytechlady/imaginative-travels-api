@@ -95,16 +95,16 @@ WSGI_APPLICATION = 'slitherstravels.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'slithers',
-        'HOST': 'localhost',
-        'USER': 'postgres',
-        'PASSWORD': 1234,
-        'PORT': 5432
+        'NAME': config("DB_NAME"),
+        'HOST': config("DB_HOST"),
+        'USER': config("DB_USER"),
+        'PASSWORD': config("DB_PASSWORD"),
+        'PORT': ""
     }
 }
 
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+# db_from_env = dj_database_url.config(conn_max_age=600)
+# DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -169,4 +169,4 @@ EMAIL_HOST_USER = config("EMAIL_HOST_USER")
 EMAIL_HOST_PASSWORD = config("EMAIL_HOST_PASSWORD")
 EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool)
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
