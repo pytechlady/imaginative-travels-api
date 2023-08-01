@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'contact',
     'rest_framework',
     'rest_framework.authtoken',
+    'ckeditor',
     'whitenoise.runserver_nostatic',
 ]
 
