@@ -10,7 +10,7 @@ class BlogAdmin(admin.ModelAdmin):
     
     thumbnail.short_description = 'Photo'
     
-    list_display = ('id', 'thumbnail', 'title', 'category' )
+    list_display = ('id', 'thumbnail', 'title', 'category')
     list_display_links = ('id', 'thumbnail', 'title')
     search_fields = ('id', 'title', 'category')
     list_filter = ('category',)
