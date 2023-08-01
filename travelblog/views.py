@@ -8,5 +8,7 @@ class BlogPost(viewsets.ModelViewSet):
     serializer_class = BlogSerializer
     queryset = Blog.objects.all()
     pagination_class = CustomPagination
+    
+    
 
         
