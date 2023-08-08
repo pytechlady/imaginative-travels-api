@@ -27,13 +27,5 @@ class ContactForm(generics.GenericAPIView):
                 message=message
             )
             contact.save()
-            
-            send_mail(
-                'Sent email from {}'.format(f'{first_name} {last_name}'),
-                'Message: {}'.format(f'{message} \n Mobile: {phone_number} \n Email: {email}'),
-                email,
-                ['imaginativetourism@gmail.com'],
-                fail_silently=False,
-            )
             return Response({"message": "Successfully sent"}, status=status.HTTP_200_OK)
         return Response({'message': "Failed"}, status=status.HTTP_400_BAD_REQUEST)
